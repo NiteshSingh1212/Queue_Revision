@@ -1,0 +1,69 @@
+#include<iostream>
+#include <queue >
+#include<vector>
+#include<limits.h>
+using namespace std;
+class Queue {
+public:
+int size;
+int front;
+int rear;
+int * arr;
+ Queue (int size){
+    this->size=size;
+    arr=new int[size];
+    front=0;
+    rear=0;
+}
+ void push(int val){
+    if(rear==size){
+        cout<< "queue  is full";
+    }
+    else{
+        arr[rear]=val;
+        rear++;
+    }
+ }
+  void pop(){
+    if(rear==front){
+        cout<< "Queue  is Empty";
+    }
+    else{
+      arr[front]=-1;
+      front++; 
+      
+    }
+ }
+ void getFront(){
+    
+ }
+};
+int main(){
+// queue <int> q;
+// q.push(10);
+// q.push(20);
+// q.push(30);
+// q.push(40);
+// cout<<q.front()<<" ";
+// q.pop();
+// q.pop();
+// q.pop();
+// cout<<q.size()<<" ";
+// cout<<q.front()<<" ";
+
+//     if(q.size()==0){
+//         cout<<"true";
+//     }
+//     else{cout<<"false";
+//     }
+Queue  q(5);
+q.push(10);
+q.push(20);
+q.push(30);
+q.push(40);
+q.pop();
+q.pop();
+q.pop();
+q.pop();
+q.pop();
+}
